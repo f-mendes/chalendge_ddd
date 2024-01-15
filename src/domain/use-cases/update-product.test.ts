@@ -1,6 +1,5 @@
-import { InMemoryProducts } from "../repositories/in-memory/in-memory-products"
-import { UpdateProductUseCase } from "./update-product"
-
+import { InMemoryProducts } from '../repositories/in-memory/in-memory-products'
+import { UpdateProductUseCase } from './update-product'
 
 let productRepository: InMemoryProducts
 let sut: UpdateProductUseCase
@@ -23,11 +22,14 @@ describe('Update Product', () => {
       createdAt: new Date(),
     })
 
-    const { product: updatedProduct } = await sut.execute({
-      color: 'blue',
-      size: 'G',
-      quantity: 10,
-    }, product.id)
+    const { product: updatedProduct } = await sut.execute(
+      {
+        color: 'blue',
+        size: 'G',
+        quantity: 10,
+      },
+      product.id,
+    )
 
     expect(updatedProduct?.color).toEqual('blue')
     expect(updatedProduct?.size).toEqual('G')

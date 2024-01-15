@@ -1,5 +1,5 @@
-import { Provider } from "../entities/provider"
-import { ProviderRepository } from "../repositories/provider-repository"
+import { Provider } from '../entities/provider'
+import { ProviderRepository } from '../repositories/provider-repository'
 
 interface ProviderRequest {
   name: string

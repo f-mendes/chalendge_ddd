@@ -1,6 +1,5 @@
-import { InMemoryProducts } from "../repositories/in-memory/in-memory-products"
-import { TrackProductUseCase } from "./track-product"
-
+import { InMemoryProducts } from '../repositories/in-memory/in-memory-products'
+import { TrackProductUseCase } from './track-product'
 
 let productRepository: InMemoryProducts
 let sut: TrackProductUseCase

@@ -1,10 +1,9 @@
-import { InMemoryStockRepository } from "../repositories/in-memory/in-memory-stock";
-import { AlertStockProductsUseCase } from "./alert-stock-products";
-import { Product } from "../entities/product";
-
+import { InMemoryStockRepository } from '../repositories/in-memory/in-memory-stock'
+import { AlertStockProductsUseCase } from './alert-stock-products'
+import { Product } from '../entities/product'
 
 let stockRepository: InMemoryStockRepository
-let sut : AlertStockProductsUseCase
+let sut: AlertStockProductsUseCase
 
 describe('Alert Stock Products', () => {
   beforeEach(() => {
@@ -47,8 +46,8 @@ describe('Alert Stock Products', () => {
           quantityMin: 5,
           providerId: '1',
           createdAt: new Date(),
-        }) 
-      ],  
+        }),
+      ],
       createdAt: new Date(),
     })
 

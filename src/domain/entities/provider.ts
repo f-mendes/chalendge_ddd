@@ -8,11 +8,10 @@ export interface ProviderProps {
 }
 
 export class Provider extends Entity<ProviderProps> {
-
   get name() {
     return this.props.name
   }
-  
+
   static create(props: ProviderProps, id?: UniqueEntityID) {
     return new Provider(props, id)
   }

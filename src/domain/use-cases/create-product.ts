@@ -1,4 +1,3 @@
-import { UniqueEntityID } from '@/core/unique-entity-id'
 import { ProductRepository } from '../repositories/product-repository'
 import { Product } from '../entities/product'
 

@@ -1,7 +1,6 @@
-import { Product } from "../entities/product"
-import { InMemoryStockRepository } from "../repositories/in-memory/in-memory-stock"
-import { ReportStockUseCase } from "./report-stock"
-
+import { Product } from '../entities/product'
+import { InMemoryStockRepository } from '../repositories/in-memory/in-memory-stock'
+import { ReportStockUseCase } from './report-stock'
 
 let stockRepository: InMemoryStockRepository
 let sut: ReportStockUseCase
@@ -47,8 +46,8 @@ describe('Report Stock', () => {
           quantityMin: 5,
           providerId: '1',
           createdAt: new Date(),
-        }) 
-      ],  
+        }),
+      ],
       createdAt: new Date(),
     })
 
@@ -58,6 +57,5 @@ describe('Report Stock', () => {
     expect(report1?.length).toBe(2)
     expect(report2?.length).toBe(3)
     expect(report3?.length).toBe(0)
-
   })
 })

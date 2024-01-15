@@ -14,8 +14,6 @@ export interface ProductProps {
 }
 
 export class Product extends Entity<ProductProps> {
-
-
   get name() {
     return this.props.name
   }
@@ -24,42 +22,41 @@ export class Product extends Entity<ProductProps> {
     return this.props.color
   }
 
+  set color(color: string) {
+    this.props.color = color
+  }
+
   get size() {
     return this.props.size
-  }
-
-  get price() {
-    return this.props.price
-  }
-
-  get quantity() {
-    return this.props.quantity
-  }
-
-  get quantityMin() {
-    return this.props.quantityMin
-  }
-  
-  get providerId() {
-    return this.props.providerId
-  }
-
-  set color(color: string) {
-     this.props.color = color
   }
 
   set size(size) {
     this.props.size = size
   }
 
+  get price() {
+    return this.props.price
+  }
+
   set price(price: number) {
     this.props.price = price
+  }
+
+  get quantity() {
+    return this.props.quantity
   }
 
   set quantity(quantity: number) {
     this.props.quantity = quantity
   }
 
+  get quantityMin() {
+    return this.props.quantityMin
+  }
+
+  get providerId() {
+    return this.props.providerId
+  }
 
   static create(props: ProductProps, id?: UniqueEntityID) {
     return new Product(props, id)

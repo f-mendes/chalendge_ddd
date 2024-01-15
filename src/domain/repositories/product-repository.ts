@@ -11,5 +11,8 @@ interface FieldsProductUpdate {
 export interface ProductRepository {
   create(data: ProductProps): Promise<Product>
   findById(id: UniqueEntityID): Promise<Product | null>
-  update(data: Partial<FieldsProductUpdate>, id: UniqueEntityID): Promise<Product>
+  update(
+    data: Partial<FieldsProductUpdate>,
+    id: UniqueEntityID,
+  ): Promise<Product>
 }

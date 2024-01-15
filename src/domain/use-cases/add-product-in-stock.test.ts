@@ -23,26 +23,23 @@ describe('Add Product', () => {
     })
 
     const product2 = Product.create({
-        name: 'Product 2',
-        color: 'red',
-        size: 'M',
-        price: 10,
-        quantity: 10,
-        providerId: '123',
-        createdAt: new Date(),
-      })
+      name: 'Product 2',
+      color: 'red',
+      size: 'M',
+      price: 10,
+      quantity: 10,
+      providerId: '123',
+      createdAt: new Date(),
+    })
 
     const { stock } = await sut.execute({
       name: 'Stock 1',
-      products: [
-        product1,
-      ],
+      products: [product1],
     })
-   
+
     stock.products = product2
 
     expect(stock.products.length).toBe(2)
     expect(stock.products[0].quantity).toBe(5)
-      
   })
 })

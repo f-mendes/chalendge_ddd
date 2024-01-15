@@ -29,7 +29,7 @@ export class InMemoryProducts implements ProductRepository {
     if (!product) {
       throw new Error('Product not found')
     }
-    
+
     Object.assign(product, data)
 
     return product

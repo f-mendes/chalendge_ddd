@@ -12,14 +12,12 @@ describe('Create Provider', () => {
   })
 
   it('should create a provider', async () => {
-
     const { provider } = await sut.execute({
       name: 'Provider 1',
     })
-    
+
     expect(provider).toBeInstanceOf(Provider)
     expect(provider.id.toString()).toEqual(expect.any(String))
     expect(provider.name).toEqual('Provider 1')
-      
   })
 })
